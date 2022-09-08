@@ -51,12 +51,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "SlotTest",
-};
-</script>
-
 <script setup>
 import SlotsTitle from "@/components/slotTest/SlotsTitle.vue";
 import SlotDemo from "@/components/slotTest/SlotDemo.vue";

@@ -9,13 +9,8 @@
   ></div>
 </template>
 
-<script>
-export default {
-  name: "EchartTest",
-};
-</script>
-
 <script setup>
+import { onMounted, ref } from "vue";
 // 引入 echarts 核心模塊，核心模塊提供了 echarts 使用必需要的接口。
 import * as echarts from "echarts/core";
 // 引入Line圖表，Pie圖表，圖表後綴都為 Chart
@@ -48,8 +43,6 @@ echarts.use([
   UniversalTransition,
   CanvasRenderer,
 ]);
-
-import { onMounted, ref } from "vue";
 
 const getChildEchartDOM1 = ref(null);
 const getChildEchartDOM2 = ref(null);

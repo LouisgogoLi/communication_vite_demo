@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "DirectiveTest",
-};
-</script>
-
 <script setup>
 import DirectiveDemo from "@/components/componentTest/directiveTest/DirectiveDemo.vue";
 </script>

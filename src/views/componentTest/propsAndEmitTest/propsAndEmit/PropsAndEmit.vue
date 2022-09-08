@@ -8,12 +8,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "PropsAndEmit",
-};
-</script>
-
 <script setup>
 import TitleBar from "@/components/componentTest/propsAndEmitTest/propsAndEmit/TitleBar.vue";
 import ListItem from "@/components/componentTest/propsAndEmitTest/propsAndEmit/ListItem.vue";

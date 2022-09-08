@@ -108,16 +108,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "AddressForCrud",
-};
-</script>
-
 <script setup>
 import cityList from "@/api/json/publicJson/cityList.json";
 import { reactive, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import Schema from "async-validator";
 
 const router = useRouter();
 
@@ -257,7 +252,6 @@ const fnValidator = () => {
 };
 
 //個別驗證
-import Schema from "async-validator";
 const rules = {
   city: [{ required: true, message: "請選擇縣市" }],
   area: [{ required: true, message: "請選擇區域" }],

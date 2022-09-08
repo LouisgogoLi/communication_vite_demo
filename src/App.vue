@@ -6,52 +6,40 @@
           <HeaderComponet />
         </el-header>
         <el-main>
-          <router-view />
+          <RouterView />
         </el-main>
       </el-container>
     </div>
   </el-config-provider>
 </template>
 
-<script>
-export default {
-  name: "App",
-};
-</script>
-
 <script setup>
 import HeaderComponet from "@/components/publicComponents/header/HeaderComponet.vue";
 
-import { useRoute } from "vue-router";
-const route = useRoute();
-
-import { ref, computed, watch, onMounted } from "vue";
 import zhTwElement from "element-plus/lib/locale/lang/zh-tw";
 import enElement from "element-plus/lib/locale/lang/en";
-const localeElement = ref(zhTwElement);
-import { useStore } from "vuex";
-const store = useStore();
-const sLanguage = computed(() => {
-  return store.getters.getLanguage;
-});
 
-const fnChangeLanguage = () => {
-  if (sLanguage.value === "en") {
+import { useI18n } from "vue-i18n";
+import { useRoute, RouterView } from "vue-router";
+import { ref, watchEffect } from "vue";
+import { useCommonStore } from "@/stores/common";
+const common = useCommonStore();
+
+const route = useRoute();
+
+const localeElement = ref(enElement);
+
+const { locale } = useI18n();
+locale.value = common.language;
+
+watchEffect(() => {
+  console.log(common.language);
+  locale.value = common.language;
+  if (common.language === "en") {
     localeElement.value = enElement;
-  } else if (sLanguage.value === "zh_tw") {
+  } else if (common.language === "zh_tw") {
     localeElement.value = zhTwElement;
   }
-};
-
-watch(
-  () => sLanguage.value,
-  () => {
-    fnChangeLanguage();
-  }
-);
-
-onMounted(() => {
-  fnChangeLanguage();
 });
 </script>
 

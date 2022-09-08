@@ -7,12 +7,6 @@
   </ul>
 </template>
 
-<script>
-export default {
-  name: "AxiosMock",
-};
-</script>
-
 <script setup>
 import axios from "axios";
 import { reactive } from "vue";

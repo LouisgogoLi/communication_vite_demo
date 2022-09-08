@@ -10,12 +10,6 @@
   />
 </template>
 
-<script>
-export default {
-  name: "PropsApp",
-};
-</script>
-
 <script setup>
 import PropsTest from "@/components/componentTest/propsAndEmitTest/propsApp/PropsTest.vue";
 import { ref, reactive } from "vue";

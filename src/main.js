@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import store from "./store";
 
 import App from "./App.vue";
 import router from "./router";
@@ -19,7 +18,6 @@ fnToDoDirective(app);
 
 app.use(i18n);
 app.use(createPinia());
-app.use(store);
 app.use(router);
 
 router.isReady().then(() => {

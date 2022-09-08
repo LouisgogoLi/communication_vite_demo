@@ -2,12 +2,6 @@
   <ParentComponent />
 </template>
 
-<script>
-export default {
-  name: "ProvideInjectTest",
-};
-</script>
-
 <script setup>
 import ParentComponent from "@/components/componentTest/provideInjectTest/ParentComponent.vue";
 import { provide, ref, reactive, readonly } from "vue";

@@ -9,12 +9,12 @@
 </template>
 
 <script setup>
-import TitleBar from "@/components/componentTest/propsAndEmitTest/propsAndEmit/TitleBar.vue";
-import ListItem from "@/components/componentTest/propsAndEmitTest/propsAndEmit/ListItem.vue";
-import EmitTest from "@/components/componentTest/propsAndEmitTest/propsAndEmit/EmitTest.vue";
-import TimerBox from "@/components/componentTest/propsAndEmitTest/propsAndEmit/TimerBox.vue";
-import DomRefTest from "@/components/componentTest/propsAndEmitTest/propsAndEmit/DomRefTest.vue";
-import { ref, onMounted } from "vue";
+import TitleBar from '@/components/componentTest/propsAndEmitTest/propsAndEmit/TitleBar.vue';
+import ListItem from '@/components/componentTest/propsAndEmitTest/propsAndEmit/ListItem.vue';
+import EmitTest from '@/components/componentTest/propsAndEmitTest/propsAndEmit/EmitTest.vue';
+import TimerBox from '@/components/componentTest/propsAndEmitTest/propsAndEmit/TimerBox.vue';
+import DomRefTest from '@/components/componentTest/propsAndEmitTest/propsAndEmit/DomRefTest.vue';
+import { ref, onMounted } from 'vue';
 
 const isOpen = ref(true);
 
@@ -27,7 +27,7 @@ const fnEmitTestNumber = (num) => {
 };
 
 const fnTimerNumber = (num) => {
-  console.log("Time is over..", num.value);
+  console.log('Time is over..', num.value);
 };
 
 const getChildDomRefTest = ref(null);

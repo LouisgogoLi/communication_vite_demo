@@ -14,15 +14,15 @@
 </template>
 
 <script setup>
-import HeaderComponet from "@/components/publicComponents/header/HeaderComponet.vue";
+import HeaderComponet from '@/components/publicComponents/header/HeaderComponet.vue';
 
-import zhTwElement from "element-plus/lib/locale/lang/zh-tw";
-import enElement from "element-plus/lib/locale/lang/en";
+import zhTwElement from 'element-plus/lib/locale/lang/zh-tw';
+import enElement from 'element-plus/lib/locale/lang/en';
 
-import { useI18n } from "vue-i18n";
-import { useRoute, RouterView } from "vue-router";
-import { ref, watchEffect } from "vue";
-import { useCommonStore } from "@/stores/common";
+import { useI18n } from 'vue-i18n';
+import { useRoute, RouterView } from 'vue-router';
+import { ref, watchEffect } from 'vue';
+import { useCommonStore } from '@/stores/common';
 const common = useCommonStore();
 
 const route = useRoute();
@@ -35,9 +35,9 @@ locale.value = common.language;
 watchEffect(() => {
   console.log(common.language);
   locale.value = common.language;
-  if (common.language === "en") {
+  if (common.language === 'en') {
     localeElement.value = enElement;
-  } else if (common.language === "zh_tw") {
+  } else if (common.language === 'zh_tw') {
     localeElement.value = zhTwElement;
   }
 });
@@ -51,7 +51,7 @@ watchEffect(() => {
 body,
 input,
 select {
-  font-family: "Noto Sans TC", Helvetica, "微軟正黑體";
+  font-family: 'Noto Sans TC', Helvetica, '微軟正黑體';
   line-height: 140%;
   font-weight: 400;
   color: #333;
@@ -74,7 +74,7 @@ nav {
 }
 .el-loading-mask.is-fullscreen {
   .el-loading-spinner {
-    background: url("@/assets/gif/animated-love-image-0025.gif");
+    background: url('@/assets/gif/animated-love-image-0025.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150px 100px;

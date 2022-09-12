@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref } from 'vue';
 
 const testNumber = ref(54088);
 
@@ -20,7 +20,7 @@ const emit = defineEmits({ emitTestNumber: null });
 // });
 
 onMounted(() => {
-  emit("emitTestNumber", testNumber);
+  emit('emitTestNumber', testNumber);
 });
 </script>
 

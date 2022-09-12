@@ -1,4 +1,4 @@
-import { ElLoading } from "element-plus";
+import { ElLoading } from 'element-plus';
 
 let loadingCount = 0;
 let loading;
@@ -6,8 +6,8 @@ let loading;
 const startLoading = () => {
   loading = ElLoading.service({
     lock: true,
-    text: "測試全域中...",
-    background: "rgba(0, 0, 0, 0.5)",
+    text: '測試全域中...',
+    background: 'rgba(0, 0, 0, 0.5)',
   });
 };
 const endLoading = () => {

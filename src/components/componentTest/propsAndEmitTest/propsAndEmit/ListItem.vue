@@ -1,13 +1,11 @@
 <template>
   <ul :class="['box', { open: props.propsIsOpen }]" v-if="props.propsIsOpen">
-    <li v-for="(list, idx) in listArr" :key="list.id" data-test="list_test">
-      {{ idx + 1 }}. {{ list.name }}
-    </li>
+    <li v-for="(list, idx) in listArr" :key="list.id" data-test="list_test">{{ idx + 1 }}. {{ list.name }}</li>
   </ul>
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive } from 'vue';
 
 const props = defineProps({
   propsIsOpen: {
@@ -17,11 +15,11 @@ const props = defineProps({
 });
 
 const listArr = reactive([
-  { id: "0001", name: "測試Vue陣列1", show: true, status: "red" },
-  { id: "0002", name: "測試Vue陣列2", show: false, status: "blue" },
-  { id: "0003", name: "測試Vue陣列3", show: true, status: "red" },
-  { id: "0004", name: "測試Vue陣列4", show: true, status: "red" },
-  { id: "0005", name: "測試Vue陣列5", show: false, status: "blue" },
+  { id: '0001', name: '測試Vue陣列1', show: true, status: 'red' },
+  { id: '0002', name: '測試Vue陣列2', show: false, status: 'blue' },
+  { id: '0003', name: '測試Vue陣列3', show: true, status: 'red' },
+  { id: '0004', name: '測試Vue陣列4', show: true, status: 'red' },
+  { id: '0005', name: '測試Vue陣列5', show: false, status: 'blue' },
 ]);
 </script>
 

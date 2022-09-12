@@ -8,17 +8,16 @@
 </template>
 
 <script setup>
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive } from 'vue';
 
 const twAddress = reactive({ addressList: [] });
 
 onMounted(() => {
-  window.addEventListener("message", (e) => {
+  window.addEventListener('message', (e) => {
     if (e.data.acrossPages) {
       twAddress.addressList = e.data.addressList;
       twAddress.addressList.forEach((item, index) => {
-        twAddress.addressList[index].wholeAddress =
-          item.sCity + item.sArea + item.sAddress;
+        twAddress.addressList[index].wholeAddress = item.sCity + item.sArea + item.sAddress;
       });
     }
   });

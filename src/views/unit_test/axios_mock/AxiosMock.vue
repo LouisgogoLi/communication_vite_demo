@@ -8,13 +8,13 @@
 </template>
 
 <script setup>
-import axios from "axios";
-import { reactive } from "vue";
+import axios from 'axios';
+import { reactive } from 'vue';
 const posts = reactive({ data: [] });
 
 const getPosts = async () => {
   let usersData = {};
-  usersData = await axios.get("https://jsonplaceholder.typicode.com/users");
+  usersData = await axios.get('https://jsonplaceholder.typicode.com/users');
   posts.data = usersData.data;
 };
 </script>

@@ -52,8 +52,8 @@
 </template>
 
 <script setup>
-import SlotsTitle from "@/components/slotTest/SlotsTitle.vue";
-import SlotDemo from "@/components/slotTest/SlotDemo.vue";
+import SlotsTitle from '@/components/slotTest/SlotsTitle.vue';
+import SlotDemo from '@/components/slotTest/SlotDemo.vue';
 </script>
 
 <style scoped>

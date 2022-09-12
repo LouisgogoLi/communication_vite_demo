@@ -14,7 +14,7 @@
 
 <style scoped>
 .container {
-  background-image: url("@/assets/images/slot_test_photo.jpg");
+  background-image: url('@/assets/images/slot_test_photo.jpg');
   background-size: 100% 200px;
   height: 200px;
   width: 600px;

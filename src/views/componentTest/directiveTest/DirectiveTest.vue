@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import DirectiveDemo from "@/components/componentTest/directiveTest/DirectiveDemo.vue";
+import DirectiveDemo from '@/components/componentTest/directiveTest/DirectiveDemo.vue';
 </script>
 
 <style scoped>

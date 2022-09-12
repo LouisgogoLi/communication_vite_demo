@@ -4,10 +4,10 @@
 </template>
 
 <script setup>
-import { inject } from "vue";
-const injectLocation = inject("provideLocation");
-const injectGeolocation = inject("provideGeolocation");
-const injectUpdateLocation = inject("provideUpdateLocation");
+import { inject } from 'vue';
+const injectLocation = inject('provideLocation');
+const injectGeolocation = inject('provideGeolocation');
+const injectUpdateLocation = inject('provideUpdateLocation');
 </script>
 
 <style scoped></style>

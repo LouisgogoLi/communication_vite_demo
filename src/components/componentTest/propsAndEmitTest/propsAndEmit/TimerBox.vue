@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from 'vue';
 
 const emit = defineEmits({
   emitTimerNumber: (num) => {
@@ -23,7 +23,7 @@ onMounted(() => {
     timerNumber.value--;
     if (timerNumber.value === 0) {
       clearInterval(timer);
-      emit("emitTimerNumber", timerNumber);
+      emit('emitTimerNumber', timerNumber);
     }
   }, 1000);
 });

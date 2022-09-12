@@ -9,12 +9,9 @@
       @select="handleSelect"
     >
       <template v-for="item in header" :key="item.tab_id">
-        <el-menu-item
-          :index="item.router_name"
-          v-if="item.List.length === 0"
-          :disabled="!item.click"
-          >{{ item.name }}</el-menu-item
-        >
+        <el-menu-item :index="item.router_name" v-if="item.List.length === 0" :disabled="!item.click">{{
+          item.name
+        }}</el-menu-item>
         <el-sub-menu :index="item.router_name" v-else>
           <template #title>{{ item.name }}</template>
           <template v-for="secondItem in item.List" :key="secondItem.tab_id">
@@ -26,15 +23,10 @@
             >
             <el-sub-menu :index="secondItem.router_name" v-else>
               <template #title>{{ secondItem.name }}</template>
-              <template
-                v-for="thirdItem in secondItem.List"
-                :key="thirdItem.tab_id"
-              >
-                <el-menu-item
-                  :index="thirdItem.router_name"
-                  :disabled="!thirdItem.click"
-                  >{{ thirdItem.name }}</el-menu-item
-                >
+              <template v-for="thirdItem in secondItem.List" :key="thirdItem.tab_id">
+                <el-menu-item :index="thirdItem.router_name" :disabled="!thirdItem.click">{{
+                  thirdItem.name
+                }}</el-menu-item>
               </template>
             </el-sub-menu>
           </template>
@@ -45,9 +37,9 @@
 </template>
 
 <script setup>
-import header from "@/api/json/publicJson/header.json";
-import { computed } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import header from '@/api/json/publicJson/header.json';
+import { computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 const route = useRoute();
 const router = useRouter();
 

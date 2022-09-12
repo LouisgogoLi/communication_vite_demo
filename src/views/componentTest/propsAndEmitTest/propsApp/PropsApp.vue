@@ -11,10 +11,10 @@
 </template>
 
 <script setup>
-import PropsTest from "@/components/componentTest/propsAndEmitTest/propsApp/PropsTest.vue";
-import { ref, reactive } from "vue";
+import PropsTest from '@/components/componentTest/propsAndEmitTest/propsApp/PropsTest.vue';
+import { ref, reactive } from 'vue';
 
-const testTime = ref("Hello Louis");
+const testTime = ref('Hello Louis');
 const bool = ref(true);
 const pay = ref(12345);
 const date = ref(new Date());

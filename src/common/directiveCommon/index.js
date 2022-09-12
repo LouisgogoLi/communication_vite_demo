@@ -1,5 +1,5 @@
-import { directiveFocus } from "./focus.js";
-import { directiveThousandsSeparator } from "./thousandsSeparator.js";
+import { directiveFocus } from './focus.js';
+import { directiveThousandsSeparator } from './thousandsSeparator.js';
 
 export function fnToDoDirective(app) {
   directiveFocus(app); //v-focus

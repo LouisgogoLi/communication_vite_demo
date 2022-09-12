@@ -1,4 +1,4 @@
-import { fnThousandsSeparator } from "@/common/methodCommon";
+import { fnThousandsSeparator } from '@/common/methodCommon';
 
 export function directiveThousandsSeparator(app) {
   // app.directive("thousandsSeparator", {
@@ -13,7 +13,7 @@ export function directiveThousandsSeparator(app) {
   // });
 
   //等同上面簡寫
-  app.directive("thousandsSeparator", (el, binding) => {
+  app.directive('thousandsSeparator', (el, binding) => {
     const sNum = fnThousandsSeparator(binding.value);
     el.innerHTML = sNum;
   });

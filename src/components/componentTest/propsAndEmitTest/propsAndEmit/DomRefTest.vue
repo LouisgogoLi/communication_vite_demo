@@ -7,15 +7,15 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted } from 'vue';
 const aTableData = reactive([
   {
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "台北市信義區",
+    date: '2016-05-02',
+    name: '王小虎',
+    address: '台北市信義區',
   },
 ]);
-const sConts = ref("我是子元件");
+const sConts = ref('我是子元件');
 const bOpenTest = ref(true);
 const fnChangeOpenText = () => {
   bOpenTest.value = !bOpenTest.value;

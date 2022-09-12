@@ -9,7 +9,7 @@
 const props = defineProps({
   propsTestName: {
     type: String,
-    default: "沒有傳值",
+    default: '沒有傳值',
   },
   propsBool: {
     type: Boolean,

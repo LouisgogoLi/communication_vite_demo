@@ -27,7 +27,7 @@ const props = defineProps({
     // eslint-disable-next-line no-unused-vars
     default: ({ row, column, rowIndex, columnIndex }) => {
       if (column.order) {
-        return { color: "#1e8ece" };
+        return { color: '#1e8ece' };
       }
     },
   },
@@ -35,7 +35,7 @@ const props = defineProps({
     type: Function,
     // eslint-disable-next-line no-unused-vars
     default: ({ row, column, rowIndex, columnIndex }) => {
-      return "headerCellClass";
+      return 'headerCellClass';
     },
   },
   propsTableRowClassName: {
@@ -43,9 +43,9 @@ const props = defineProps({
     // eslint-disable-next-line no-unused-vars
     default: ({ row, column, rowIndex, columnIndex }) => {
       if (rowIndex % 2 === 0) {
-        return "oddrow";
+        return 'oddrow';
       } else {
-        return "evenrow";
+        return 'evenrow';
       }
     },
   },
@@ -57,7 +57,7 @@ const props = defineProps({
   },
   propsEmptyValue: {
     type: String,
-    default: "查無資料",
+    default: '查無資料',
   },
 });
 </script>

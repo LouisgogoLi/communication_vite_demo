@@ -6,12 +6,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "DomRefTest",
-};
-</script>
-
 <script setup>
 import { ref, reactive, onMounted } from "vue";
 const aTableData = reactive([

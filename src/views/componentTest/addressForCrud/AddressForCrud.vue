@@ -4,7 +4,7 @@
     <button @click="fnEmpty()">清空所有值</button>
   </div>
   <div
-    v-for="(addressItem, index) in oTwAddress.addressList"
+    v-for="(addressItem, index) in twAddress.addressList"
     :key="addressItem.id"
     data-test="addressList"
   >
@@ -72,12 +72,12 @@
         alt="刪除"
         style="width: 25px; height: 25px"
         @click="deleteAddress(index)"
-        v-if="oTwAddress.addressList.length === 1 ? false : true"
+        v-if="twAddress.addressList.length === 1 ? false : true"
         data-test="address_delete"
       />
       <div
         style="width: 25px; height: 25px"
-        v-if="oTwAddress.addressList.length === 1 ? true : false"
+        v-if="twAddress.addressList.length === 1 ? true : false"
       ></div>
     </div>
     <div :ref="(el) => setItemRef(el, index)">
@@ -119,7 +119,7 @@ const router = useRouter();
 let sTime = Date.now().toString();
 
 //初始宣告地址陣列
-const oTwAddress = reactive({
+const twAddress = reactive({
   addressList: [
     {
       id: sTime,
@@ -139,33 +139,33 @@ const oTwAddress = reactive({
 
 //選擇縣市
 const fnCityChange = (event, index) => {
-  const areaFilter = oTwAddress.addressList[index].aCity.filter(
+  const areaFilter = twAddress.addressList[index].aCity.filter(
     (list) => list.name === event.target.value
   );
-  oTwAddress.addressList[index].sArea = "";
-  oTwAddress.addressList[index].sAddress = "";
-  oTwAddress.addressList[index].sErrorCityMessage = "";
-  oTwAddress.addressList[index].sErrorAreaMessage = "";
-  oTwAddress.addressList[index].sErrorAddressMessage = "";
-  oTwAddress.addressList[index].aArea = areaFilter[0].area;
+  twAddress.addressList[index].sArea = "";
+  twAddress.addressList[index].sAddress = "";
+  twAddress.addressList[index].sErrorCityMessage = "";
+  twAddress.addressList[index].sErrorAreaMessage = "";
+  twAddress.addressList[index].sErrorAddressMessage = "";
+  twAddress.addressList[index].aArea = areaFilter[0].area;
 };
 
 //選擇區域
 const fnAreaChange = (event, index) => {
-  oTwAddress.addressList[index].aArea.forEach((item) => {
+  twAddress.addressList[index].aArea.forEach((item) => {
     if (item.name === event.target.value) {
-      oTwAddress.addressList[index].sZip = item.zip;
+      twAddress.addressList[index].sZip = item.zip;
     }
   });
-  oTwAddress.addressList[index].sAddress = "";
-  oTwAddress.addressList[index].sErrorAreaMessage = "";
-  oTwAddress.addressList[index].sErrorAddressMessage = "";
+  twAddress.addressList[index].sAddress = "";
+  twAddress.addressList[index].sErrorAreaMessage = "";
+  twAddress.addressList[index].sErrorAddressMessage = "";
 };
 
 //新增地址
 const addAddress = () => {
   sTime = Date.now().toString();
-  oTwAddress.addressList.push({
+  twAddress.addressList.push({
     id: sTime,
     aCity: cityList.twzip.city,
     aArea: [],
@@ -182,13 +182,13 @@ const addAddress = () => {
 
 //刪除地址
 const deleteAddress = (index) => {
-  oTwAddress.addressList.splice(index, 1);
+  twAddress.addressList.splice(index, 1);
 };
 
 //重置
 const fnReset = () => {
   sTime = Date.now().toString();
-  oTwAddress.addressList = [
+  twAddress.addressList = [
     {
       id: sTime,
       aCity: cityList.twzip.city,
@@ -207,7 +207,7 @@ const fnReset = () => {
 
 //清空所有值
 const fnEmpty = () => {
-  oTwAddress.addressList.forEach((item) => {
+  twAddress.addressList.forEach((item) => {
     item.aArea = [];
     item.sCity = "";
     item.sArea = "";
@@ -228,7 +228,7 @@ const fnValidator = () => {
   };
 
   let bErrorHappen = false;
-  for (let element of oTwAddress.addressList) {
+  for (let element of twAddress.addressList) {
     oRule.city = element.sCity;
     oRule.area = element.sArea;
     oRule.address = element.sAddress;
@@ -263,12 +263,12 @@ const rules = {
 const validator = new Schema(rules);
 const handleBlur = (event, index, rule, value, errorValue) => {
   let oRule = {};
-  oRule[rule] = oTwAddress.addressList[index][value];
+  oRule[rule] = twAddress.addressList[index][value];
   validator.validate(oRule, (errors, fields) => {
     if (errors && fields[rule]) {
-      oTwAddress.addressList[index][errorValue] = fields[rule][0].message;
+      twAddress.addressList[index][errorValue] = fields[rule][0].message;
     } else {
-      oTwAddress.addressList[index][errorValue] = "";
+      twAddress.addressList[index][errorValue] = "";
     }
   });
 };
@@ -276,13 +276,13 @@ const handleBlur = (event, index, rule, value, errorValue) => {
 //迴圈丟入陣列塞入ref
 const setItemRef = (el, index) => {
   if (el) {
-    oTwAddress.addressList[index].warnRef = el;
+    twAddress.addressList[index].warnRef = el;
   }
 };
 
 //localStorage暫存
 const fnLocalStorageSubmit = () => {
-  localStorage.setItem("twAddressKey", JSON.stringify(oTwAddress.addressList));
+  localStorage.setItem("twAddressKey", JSON.stringify(twAddress.addressList));
 };
 
 //localStorage暫存清空
@@ -304,7 +304,7 @@ const fnSubmit = async () => {
         {
           acrossPages: true,
           showHeaderFooter: false,
-          addressList: JSON.parse(JSON.stringify(oTwAddress.addressList)),
+          addressList: JSON.parse(JSON.stringify(twAddress.addressList)),
         },
         "*"
       );
@@ -314,9 +314,9 @@ const fnSubmit = async () => {
 
 onMounted(() => {
   if (localStorage.getItem("twAddressKey")) {
-    oTwAddress.addressList.length = 0;
+    twAddress.addressList.length = 0;
     JSON.parse(localStorage.getItem("twAddressKey")).forEach((item) => {
-      oTwAddress.addressList.push(item);
+      twAddress.addressList.push(item);
     });
   }
 });

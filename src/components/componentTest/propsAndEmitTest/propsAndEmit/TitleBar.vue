@@ -4,12 +4,6 @@
   >
 </template>
 
-<script>
-export default {
-  name: "TitleBar",
-};
-</script>
-
 <script setup>
 const props = defineProps({
   propsHandListShow: {

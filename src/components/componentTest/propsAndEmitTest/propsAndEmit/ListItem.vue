@@ -1,16 +1,10 @@
 <template>
   <ul :class="['box', { open: props.propsIsOpen }]" v-if="props.propsIsOpen">
-    <li v-for="(list, idx) in aListArr" :key="list.id" data-test="list_test">
+    <li v-for="(list, idx) in listArr" :key="list.id" data-test="list_test">
       {{ idx + 1 }}. {{ list.name }}
     </li>
   </ul>
 </template>
-
-<script>
-export default {
-  name: "ListItem",
-};
-</script>
 
 <script setup>
 import { reactive } from "vue";
@@ -22,7 +16,7 @@ const props = defineProps({
   },
 });
 
-const aListArr = reactive([
+const listArr = reactive([
   { id: "0001", name: "測試Vue陣列1", show: true, status: "red" },
   { id: "0002", name: "測試Vue陣列2", show: false, status: "blue" },
   { id: "0003", name: "測試Vue陣列3", show: true, status: "red" },
@@ -40,7 +34,7 @@ const aListArr = reactive([
   transition: height 0.4s;
 }
 .box.open {
-  height: 200px;
+  height: 210px;
 }
 .box > li {
   display: flex;

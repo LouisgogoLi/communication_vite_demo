@@ -5,12 +5,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "PropsTest",
-};
-</script>
-
 <script setup>
 const props = defineProps({
   propsTestName: {

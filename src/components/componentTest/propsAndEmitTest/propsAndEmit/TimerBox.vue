@@ -1,12 +1,6 @@
 <template>
-  <h1>{{ nTimerNumber }}</h1>
+  <h1>{{ timerNumber }}</h1>
 </template>
-
-<script>
-export default {
-  name: "TimerBox",
-};
-</script>
 
 <script setup>
 import { ref, onMounted } from "vue";
@@ -21,15 +15,15 @@ const emit = defineEmits({
   },
 });
 
-const nTimerNumber = ref(5);
+const timerNumber = ref(5);
 let timer = null;
 
 onMounted(() => {
   timer = setInterval(() => {
-    nTimerNumber.value--;
-    if (nTimerNumber.value === 0) {
+    timerNumber.value--;
+    if (timerNumber.value === 0) {
       clearInterval(timer);
-      emit("emitTimerNumber", nTimerNumber);
+      emit("emitTimerNumber", timerNumber);
     }
   }, 1000);
 });

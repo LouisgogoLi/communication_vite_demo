@@ -12,12 +12,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "SlotDemo",
-};
-</script>
-
 <style scoped>
 .container {
   background-image: url("@/assets/images/slot_test_photo.jpg");

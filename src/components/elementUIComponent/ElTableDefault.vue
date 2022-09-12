@@ -86,12 +86,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "ElTableDefault",
-};
-</script>
-
 <script setup>
 const tableData = [
   {
@@ -185,16 +179,19 @@ const tableData = [
 //column為某一列的屬性
 //rowIndex為某一行(從0開始數起)
 //columnIndex為某一列(從0開始數起)
+// eslint-disable-next-line no-unused-vars
 const headerCellStyle = ({ row, column, rowIndex, columnIndex }) => {
   if (column.order) {
     return { color: "#1e8ece" };
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 const headerCellClassName = ({ row, column, rowIndex, columnIndex }) => {
   return "headerCellClass";
 };
 
+// eslint-disable-next-line no-unused-vars
 const tableRowClassName = ({ row, column, rowIndex, columnIndex }) => {
   if (rowIndex % 2 === 0) {
     return "oddrow";

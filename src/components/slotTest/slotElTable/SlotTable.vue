@@ -16,12 +16,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "SlotTable",
-};
-</script>
-
 <script setup>
 const props = defineProps({
   propsTableData: {
@@ -30,6 +24,7 @@ const props = defineProps({
   },
   propsHeaderCellStyle: {
     type: Function,
+    // eslint-disable-next-line no-unused-vars
     default: ({ row, column, rowIndex, columnIndex }) => {
       if (column.order) {
         return { color: "#1e8ece" };
@@ -38,12 +33,14 @@ const props = defineProps({
   },
   propsHeaderCellClassName: {
     type: Function,
+    // eslint-disable-next-line no-unused-vars
     default: ({ row, column, rowIndex, columnIndex }) => {
       return "headerCellClass";
     },
   },
   propsTableRowClassName: {
     type: Function,
+    // eslint-disable-next-line no-unused-vars
     default: ({ row, column, rowIndex, columnIndex }) => {
       if (rowIndex % 2 === 0) {
         return "oddrow";

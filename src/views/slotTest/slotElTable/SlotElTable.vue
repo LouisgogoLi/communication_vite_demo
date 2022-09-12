@@ -4,7 +4,7 @@
       class="slotElTable1"
       :propsTableData="tableData1"
       :propsDefaultSort="oDefaultSort1"
-      v-loading="bLoading"
+      v-loading="isLoading"
       element-loading-text="測試loading"
       element-loading-background="rgba(0, 0, 0, 0.3)"
       :element-loading-svg="svg"
@@ -119,16 +119,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "SlotElTable",
-};
-</script>
-
 <script setup>
 import SlotTable from "@/components/slotTest/slotElTable/SlotTable.vue";
 
 import { ref, reactive } from "vue";
+
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const tableData1 = [
   {
@@ -231,11 +228,12 @@ const svg = ref(`
         " style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"/>
       `);
 
-const bLoading = ref(true);
+const isLoading = ref(true);
 setTimeout(() => {
-  bLoading.value = false;
+  isLoading.value = false;
 }, 2000);
 
+// eslint-disable-next-line no-unused-vars
 const fnNumberFormatter = (row, column, cellValue, index) => {
   const sNum = cellValue + "";
   const aNumArr = sNum.split("").reverse();
@@ -310,8 +308,6 @@ const tableData4 = [
   },
 ];
 
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 const testPrint = () => {
   html2canvas(document.querySelector("body")).then((canvas) => {
     document.body.appendChild(canvas);

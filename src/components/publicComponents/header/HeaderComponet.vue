@@ -44,19 +44,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HeaderComponet",
-};
-</script>
-
 <script setup>
 import header from "@/api/json/publicJson/header.json";
+import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 const route = useRoute();
 const router = useRouter();
 
-import { computed } from "vue";
 const activeIndex = computed(() => {
   return route.name;
 });

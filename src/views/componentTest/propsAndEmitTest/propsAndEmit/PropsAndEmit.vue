@@ -1,7 +1,7 @@
 <template>
   <div>
     <TitleBar :propsHandListShow="fnHandListShow" />
-    <ListItem :propsIsOpen="bIsOpen" />
+    <ListItem :propsIsOpen="isOpen" />
     <EmitTest @emitTestNumber="fnEmitTestNumber" />
     <TimerBox @emitTimerNumber="fnTimerNumber" />
     <DomRefTest ref="getChildDomRefTest" />
@@ -16,10 +16,10 @@ import TimerBox from "@/components/componentTest/propsAndEmitTest/propsAndEmit/T
 import DomRefTest from "@/components/componentTest/propsAndEmitTest/propsAndEmit/DomRefTest.vue";
 import { ref, onMounted } from "vue";
 
-const bIsOpen = ref(true);
+const isOpen = ref(true);
 
 const fnHandListShow = () => {
-  bIsOpen.value = !bIsOpen.value;
+  isOpen.value = !isOpen.value;
 };
 
 const fnEmitTestNumber = (num) => {

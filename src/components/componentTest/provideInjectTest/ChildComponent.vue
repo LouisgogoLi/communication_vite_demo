@@ -3,12 +3,6 @@
   <button @click="injectUpdateLocation">點我</button>
 </template>
 
-<script>
-export default {
-  name: "ChildComponent",
-};
-</script>
-
 <script setup>
 import { inject } from "vue";
 const injectLocation = inject("provideLocation");

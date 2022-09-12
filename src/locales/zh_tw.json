@@ -1,3 +1,11 @@
 {
-  "message": "hello i18n !!"
+  "message": "你好 i18n !!",
+  "created_project": "您已經成功創建了一個項目",
+  "this_is_an_about_page": "這是about頁面",
+  "Documentation": "文檔",
+  "Tooling": "配置",
+  "Ecosystem": "生態系統",
+  "Community": "社區",
+  "Support_Vue": "協助 Vue",
+  "Home": "首頁"
 }

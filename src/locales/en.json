@@ -1,0 +1,11 @@
+{
+  "message": "hello i18n !!",
+  "created_project": "You’ve successfully created a project with",
+  "this_is_an_about_page": "This is an about page",
+  "Documentation": "Documentation",
+  "Tooling": "Tooling",
+  "Ecosystem": "Ecosystem",
+  "Community": "Community",
+  "Support_Vue": "Support Vue",
+  "Home": "Home"
+}

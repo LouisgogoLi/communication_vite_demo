@@ -1,112 +1,88 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ props.msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
+      {{ $t("created_project") }}
+      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3>{{ $t("Documentation") }}</h3>
     <ul>
       <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-          target="_blank"
-          rel="noopener"
-          >vuex</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
+        <a target="_blank" href="https://vuejs.org/"
+          >Vue’s official documentation</a
         >
       </li>
     </ul>
-    <h3>Essential Links</h3>
+    <h3>{{ $t("Tooling") }}</h3>
     <ul>
       <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
+        <a href="https://vitejs.dev/guide/features.html" target="_blank"
+          >Vite</a
         >
       </li>
       <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
+        <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
+      </li>
+      <li>
+        <a href="https://github.com/johnsoncodehk/volar" target="_blank"
+          >Volar</a
         >
       </li>
       <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
+        <a href="https://www.cypress.io/" target="_blank">Cypress</a>
       </li>
       <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
+        <a href="https://on.cypress.io/component" target="_blank"
+          >Cypress Component Testing
+        </a>
+      </li>
+      <li>
+        <a href="https://vitest.dev/" target="_blank">Vitest</a>
       </li>
     </ul>
-    <h3>Ecosystem</h3>
+    <h3>{{ $t("Ecosystem") }}</h3>
     <ul>
       <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
+        <a href="https://pinia.vuejs.org/">Pinia</a>
+      </li>
+      <li>
+        <a href="https://router.vuejs.org/">Vue Router</a>
+      </li>
+      <li>
+        <a href="https://test-utils.vuejs.org/">Vue Test Utils</a>
+      </li>
+      <li>
+        <a href="https://github.com/vuejs/devtools">Vue Dev Tools</a>
+      </li>
+      <li>
+        <a href="https://github.com/vuejs/awesome-vue">Awesome Vue</a>
+      </li>
+    </ul>
+    <h3>{{ $t("Community") }}</h3>
+    <ul>
+      <li>
+        <a href="https://chat.vuejs.org">Vue Land</a>
+      </li>
+      <li>
+        <a href="https://stackoverflow.com/questions/tagged/vue.js"
+          >StackOverflow</a
         >
       </li>
       <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
+        <a href="https://twitter.com/vuejs">@vuejs</a>
       </li>
+    </ul>
+    <h3>{{ $t("Support_Vue") }}</h3>
+    <ul>
       <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
+        <a target="_blank" href="https://vuejs.org/sponsor/"
+          >becoming a sponsor</a
         >
       </li>
     </ul>
   </div>
 </template>
-
-<script>
-export default {
-  name: "HelloWorld",
-};
-</script>
 
 <script setup>
 const props = defineProps({

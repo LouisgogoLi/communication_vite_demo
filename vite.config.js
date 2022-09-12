@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => {
         include: resolve(dirname(fileURLToPath(import.meta.url)), './path/to/src/locales/**'),
       }),
       AutoImport({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver({ importStyle: false })],
       }),
       Components({
         resolvers: [ElementPlusResolver()],
@@ -45,7 +45,10 @@ export default defineConfig(({ mode }) => {
     test: {
       globals: true,
       environment: 'jsdom',
-      setupFiles: ['./src/views/__tests__/global_setup/vitest.init.js'],
+      setupFiles: ['./unit_test/vitest.init.js'],
+      deps: {
+        inline: ['element-plus'],
+      },
     },
   };
 });

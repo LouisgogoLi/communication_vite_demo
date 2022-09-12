@@ -69,6 +69,11 @@ export const routes = [
     component: () => import('@/views/unit_test/axios_mock/AxiosMock.vue'),
   },
   {
+    path: '/external/external_test',
+    name: 'external_test',
+    component: () => import('@/views/external/external_test/ExternalTest.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue'),

@@ -106,6 +106,17 @@ export const routes = [
     ],
   },
   {
+    path: '/router_demo/navigation_guards',
+    name: 'navigation_guards',
+    component: () => import('@/views/router_demo/navigation_guards/NavigationGuards.vue'),
+    // eslint-disable-next-line no-unused-vars
+    beforeEnter: (to, from) => {
+      // 返回 false 以取消导航
+      //return false
+      // console.log(to, from, 3);
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue'),
@@ -119,11 +130,27 @@ const router = createRouter({
 
 import { showElLoading, hideElLoading } from '@/common/methodCommon/elGlobalMethod';
 
-router.beforeEach(() => {
+// eslint-disable-next-line no-unused-vars
+router.beforeEach((to, from) => {
   showElLoading();
   setTimeout(() => {
     hideElLoading();
   }, 1000);
+  // console.log(to, from, 2);
+});
+
+// eslint-disable-next-line no-unused-vars
+router.beforeResolve((to, from) => {
+  // 返回 false 以取消导航
+  //return false
+  // console.log(to, from, 4);
+});
+
+// eslint-disable-next-line no-unused-vars
+router.afterEach((to, from) => {
+  // 返回 false 以取消导航
+  //return false
+  // console.log(to, from, 5);
 });
 
 export default router;

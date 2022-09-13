@@ -198,5 +198,22 @@
         "List": []
       }
     ]
+  },
+  {
+    "tab_id": "9",
+    "router_name": "router_demo",
+    "name": "router_demo",
+    "click": true,
+    "auth": true,
+    "List": [
+      {
+        "tab_id": "9_1",
+        "router_name": "navigation_guards",
+        "name": "Navigation Guards",
+        "click": true,
+        "auth": true,
+        "List": []
+      }
+    ]
   }
 ]

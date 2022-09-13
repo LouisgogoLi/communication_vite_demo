@@ -15,6 +15,15 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: env.VITE_APP_PUBLICPATH,
+    server: {
+      proxy: {
+        '/api': {
+          target: env.VITE_APP_PROXY,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    },
     define: {
       'process.env': env,
     },

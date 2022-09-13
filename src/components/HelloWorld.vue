@@ -36,31 +36,31 @@
     <h3>{{ $t('Ecosystem') }}</h3>
     <ul>
       <li>
-        <a href="https://pinia.vuejs.org/">Pinia</a>
+        <a href="https://pinia.vuejs.org/" target="_blank">Pinia</a>
       </li>
       <li>
-        <a href="https://router.vuejs.org/">Vue Router</a>
+        <a href="https://router.vuejs.org/" target="_blank">Vue Router</a>
       </li>
       <li>
-        <a href="https://test-utils.vuejs.org/">Vue Test Utils</a>
+        <a href="https://test-utils.vuejs.org/" target="_blank">Vue Test Utils</a>
       </li>
       <li>
-        <a href="https://github.com/vuejs/devtools">Vue Dev Tools</a>
+        <a href="https://github.com/vuejs/devtools" target="_blank">Vue Dev Tools</a>
       </li>
       <li>
-        <a href="https://github.com/vuejs/awesome-vue">Awesome Vue</a>
+        <a href="https://github.com/vuejs/awesome-vue" target="_blank">Awesome Vue</a>
       </li>
     </ul>
     <h3>{{ $t('Community') }}</h3>
     <ul>
       <li>
-        <a href="https://chat.vuejs.org">Vue Land</a>
+        <a href="https://chat.vuejs.org" target="_blank">Vue Land</a>
       </li>
       <li>
-        <a href="https://stackoverflow.com/questions/tagged/vue.js">StackOverflow</a>
+        <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank">StackOverflow</a>
       </li>
       <li>
-        <a href="https://twitter.com/vuejs">@vuejs</a>
+        <a href="https://twitter.com/vuejs" target="_blank">@vuejs</a>
       </li>
     </ul>
     <h3>{{ $t('Support_Vue') }}</h3>

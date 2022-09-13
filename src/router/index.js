@@ -74,6 +74,16 @@ export const routes = [
     component: () => import('@/views/external/external_test/ExternalTest.vue'),
   },
   {
+    path: '/axios_demo/axios_get',
+    name: 'axios_get',
+    component: () => import('@/views/axios_demo/axios_get/AxiosGet.vue'),
+  },
+  {
+    path: '/axios_demo/axios_post',
+    name: 'axios_post',
+    component: () => import('@/views/axios_demo/axios_post/AxiosPost.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue'),

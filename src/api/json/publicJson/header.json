@@ -148,5 +148,30 @@
         "List": []
       }
     ]
+  },
+  {
+    "tab_id": "7",
+    "router_name": "axios_demo",
+    "name": "axios_demo",
+    "click": true,
+    "auth": true,
+    "List": [
+      {
+        "tab_id": "7_1",
+        "router_name": "axios_get",
+        "name": "axios_get",
+        "click": true,
+        "auth": true,
+        "List": []
+      },
+      {
+        "tab_id": "7_2",
+        "router_name": "axios_post",
+        "name": "axios_post",
+        "click": true,
+        "auth": true,
+        "List": []
+      }
+    ]
   }
 ]

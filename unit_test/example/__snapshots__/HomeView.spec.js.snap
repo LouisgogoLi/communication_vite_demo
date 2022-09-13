@@ -1,0 +1,46 @@
+// Vitest Snapshot v1
+
+exports[`HomeView.vue > renders correctly 1`] = `
+"<select>
+  <option value=\\"zh_tw\\">中文</option>
+  <option value=\\"en\\">English</option>
+  <option value=\\"ja\\">日本語</option>
+</select>
+<div class=\\"home\\"><img alt=\\"Vue logo\\" class=\\"logo\\" src=\\"/src/assets/svg/logo.svg\\" width=\\"125\\" height=\\"125\\">
+  <div data-v-e17ea971=\\"\\">
+    <h1 data-v-e17ea971=\\"\\">你好 i18n !!</h1>
+    <p data-v-e17ea971=\\"\\">您已經成功創建了一個項目 <a href=\\"https://vitejs.dev/\\" target=\\"_blank\\" rel=\\"noopener\\" data-v-e17ea971=\\"\\">Vite</a> + <a href=\\"https://vuejs.org/\\" target=\\"_blank\\" rel=\\"noopener\\" data-v-e17ea971=\\"\\">Vue 3</a>. </p>
+    <h3 data-v-e17ea971=\\"\\">文檔</h3>
+    <ul data-v-e17ea971=\\"\\">
+      <li data-v-e17ea971=\\"\\"><a target=\\"_blank\\" href=\\"https://vuejs.org/\\" data-v-e17ea971=\\"\\">Vue’s official documentation</a></li>
+    </ul>
+    <h3 data-v-e17ea971=\\"\\">配置</h3>
+    <ul data-v-e17ea971=\\"\\">
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://vitejs.dev/guide/features.html\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Vite</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://code.visualstudio.com/\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">VSCode</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://github.com/johnsoncodehk/volar\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Volar</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://www.cypress.io/\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Cypress</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://on.cypress.io/component\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Cypress Component Testing </a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://vitest.dev/\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Vitest</a></li>
+    </ul>
+    <h3 data-v-e17ea971=\\"\\">生態系統</h3>
+    <ul data-v-e17ea971=\\"\\">
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://pinia.vuejs.org/\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Pinia</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://router.vuejs.org/\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Vue Router</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://test-utils.vuejs.org/\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Vue Test Utils</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://github.com/vuejs/devtools\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Vue Dev Tools</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://github.com/vuejs/awesome-vue\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Awesome Vue</a></li>
+    </ul>
+    <h3 data-v-e17ea971=\\"\\">社區</h3>
+    <ul data-v-e17ea971=\\"\\">
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://chat.vuejs.org\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">Vue Land</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://stackoverflow.com/questions/tagged/vue.js\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">StackOverflow</a></li>
+      <li data-v-e17ea971=\\"\\"><a href=\\"https://twitter.com/vuejs\\" target=\\"_blank\\" data-v-e17ea971=\\"\\">@vuejs</a></li>
+    </ul>
+    <h3 data-v-e17ea971=\\"\\">協助 Vue</h3>
+    <ul data-v-e17ea971=\\"\\">
+      <li data-v-e17ea971=\\"\\"><a target=\\"_blank\\" href=\\"https://vuejs.org/sponsor/\\" data-v-e17ea971=\\"\\">becoming a sponsor</a></li>
+    </ul>
+  </div>
+</div>"
+`;

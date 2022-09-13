@@ -84,6 +84,28 @@ export const routes = [
     component: () => import('@/views/axios_demo/axios_post/AxiosPost.vue'),
   },
   {
+    path: '/pinia_demo/test_view',
+    name: 'test_view',
+    component: () => import('@/views/pinia_demo/test_view/TestView.vue'),
+  },
+  {
+    path: '/pinia_demo/golden/002',
+    name: 'golden',
+    component: () => import('@/views/pinia_demo/golden/goldSummaryTransDetails/GoldSummaryTransDetailsParent.vue'),
+    children: [
+      {
+        path: '010',
+        name: 'goldsummary',
+        component: () => import('@/views/pinia_demo/golden/goldSummaryTransDetails/GoldSummary.vue'),
+      },
+      {
+        path: '020',
+        name: 'goldtransDetails',
+        component: () => import('@/views/pinia_demo/golden/goldSummaryTransDetails/GoldTransDetails.vue'),
+      },
+    ],
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue'),

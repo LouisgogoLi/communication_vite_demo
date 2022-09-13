@@ -173,5 +173,30 @@
         "List": []
       }
     ]
+  },
+  {
+    "tab_id": "8",
+    "router_name": "pinia_demo",
+    "name": "pinia_demo",
+    "click": true,
+    "auth": true,
+    "List": [
+      {
+        "tab_id": "8_1",
+        "router_name": "test_view",
+        "name": "test_view",
+        "click": true,
+        "auth": true,
+        "List": []
+      },
+      {
+        "tab_id": "8_2",
+        "router_name": "goldsummary",
+        "name": "golden",
+        "click": true,
+        "auth": true,
+        "List": []
+      }
+    ]
   }
 ]

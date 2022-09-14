@@ -1,0 +1,1 @@
+import{a as s}from"./index.4abcd794.js";const t={herokuappBaseUrl:{DEV:"/api",PROD:"https://vue-lessons-api.herokuapp.com/"}},r=s.create({baseURL:t.herokuappBaseUrl.PROD});r.interceptors.request.use(e=>e,e=>Promise.reject(e));r.interceptors.response.use(e=>e,e=>Promise.reject(e.response.data));const a=()=>r.get("/photo/list"),p=e=>r.post("/auth/registered",e);export{a,p as b};

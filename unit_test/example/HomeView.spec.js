@@ -1,7 +1,6 @@
 import { mount } from '@vue/test-utils';
 import HomeView from '@/views/HomeView.vue';
 import { createTestingPinia } from '@pinia/testing';
-import { useCommonStore } from '@/stores/common';
 import i18n from '@/i18n.js';
 
 describe('HomeView.vue', () => {
@@ -11,7 +10,6 @@ describe('HomeView.vue', () => {
         plugins: [
           createTestingPinia({
             stubActions: false,
-            plugins: [useCommonStore],
           }),
           i18n,
         ],

@@ -213,6 +213,14 @@
         "click": true,
         "auth": true,
         "List": []
+      },
+      {
+        "tab_id": "9_2",
+        "router_name": "courses",
+        "name": "courses",
+        "click": true,
+        "auth": true,
+        "List": []
       }
     ]
   }

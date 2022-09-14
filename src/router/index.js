@@ -117,6 +117,16 @@ export const routes = [
     },
   },
   {
+    path: '/router_demo/courses',
+    name: 'courses',
+    component: () => import('@/views/router_demo/courses/CoursesIndex.vue'),
+  },
+  {
+    path: '/router_demo/courses/:courseId',
+    name: 'courses_courseId',
+    component: () => import('@/views/router_demo/courses/CourseId.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFound.vue'),

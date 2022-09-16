@@ -15,7 +15,7 @@ const calculateThePrice = (goods, checkDiscount) => {
   return totalPrice;
 };
 
-describe('Test calulate the price', () => {
+describe('Test calculate the price', () => {
   // 創建一個產品物件提供測試
   const shoppingCart = [
     { name: 'milk', price: 39, count: 2 },

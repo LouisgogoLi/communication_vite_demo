@@ -3,7 +3,7 @@
     <div v-loading>
       <el-container>
         <el-header v-if="route.query.showUI === 'false' ? false : true">
-          <HeaderComponet />
+          <HeaderComponent />
         </el-header>
         <el-main>
           <RouterView />
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import HeaderComponet from '@/components/publicComponents/header/HeaderComponet.vue';
+import HeaderComponent from '@/components/publicComponents/header/HeaderComponent.vue';
 
 import zhTwElement from 'element-plus/lib/locale/lang/zh-tw';
 import enElement from 'element-plus/lib/locale/lang/en';

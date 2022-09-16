@@ -1,24 +1,24 @@
 <template>
   <div>
-    <input v-model="sConts" v-if="bOpenTest" ref="getChildConts" />
+    <input v-model="conts" v-if="openTest" ref="getChildConts" />
     <button @click="fnChangeOpenText">按我開關</button>
-    <div>{{ sConts }}</div>
+    <div>{{ conts }}</div>
   </div>
 </template>
 
 <script setup>
 import { ref, reactive, onMounted } from 'vue';
-const aTableData = reactive([
+const tableData = reactive([
   {
     date: '2016-05-02',
     name: '王小虎',
     address: '台北市信義區',
   },
 ]);
-const sConts = ref('我是子元件');
-const bOpenTest = ref(true);
+const conts = ref('我是子元件');
+const openTest = ref(true);
 const fnChangeOpenText = () => {
-  bOpenTest.value = !bOpenTest.value;
+  openTest.value = !openTest.value;
 };
 
 const getChildConts = ref(null);
@@ -28,9 +28,9 @@ onMounted(() => {
 });
 
 defineExpose({
-  aTableData,
-  sConts,
-  bOpenTest,
+  tableData,
+  conts,
+  openTest,
   fnChangeOpenText,
   getChildConts,
 });

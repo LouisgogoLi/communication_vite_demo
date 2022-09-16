@@ -33,7 +33,7 @@ const fnTimerNumber = (num) => {
 const getChildDomRefTest = ref(null);
 
 onMounted(() => {
-  console.log(getChildDomRefTest.value.sConts);
+  console.log(getChildDomRefTest.value.conts);
 });
 </script>
 

@@ -1,0 +1,1 @@
+import{aN as m,r as n}from"./index.f160bd05.js";const u=m("golden/goldSummaryTransDetails",()=>{const a=n(10);function r(){a.value++}function e(){a.value--}return{summary:a,addSummary:r,minusSummary:e}});export{u};

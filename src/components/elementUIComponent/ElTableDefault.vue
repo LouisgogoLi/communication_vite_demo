@@ -23,7 +23,7 @@
       <el-table-column prop="transactionDirections" label="交易說明" align="center" min-width="7%"> </el-table-column>
       <el-table-column prop="payoutAmount" label="支出金額" align="right" min-width="7%"> </el-table-column>
       <el-table-column prop="deposits" label="存入金額" align="right" min-width="7%"> </el-table-column>
-      <el-table-column prop="accountBalance" label="帳面餘額" align="right" min-width="7%"> </el-table-column>
+      <el-table-column prop="accountBalanceFormat" label="帳面餘額" align="right" min-width="7%"> </el-table-column>
       <el-table-column prop="ticketNumber" label="票據號碼" align="center" min-width="7%"> </el-table-column>
       <el-table-column prop="note" label="備註" min-width="17%"> </el-table-column>
 
@@ -35,7 +35,10 @@
 </template>
 
 <script setup>
-const tableData = [
+import { reactive, computed } from 'vue';
+import { fnThousandsSeparator } from '@/common/methodCommon';
+
+const tableData = reactive([
   {
     simpleShow: "<span class='transferType'>入</span>",
     accountDate: '2022/02/07',
@@ -68,7 +71,7 @@ const tableData = [
     transactionDirections: 'ＡＴＭ轉',
     payoutAmount: '',
     deposits: '888',
-    accountBalance: '	1,784',
+    accountBalance: '	1784',
     ticketNumber: '',
     note: '8004000028000721 004',
   },
@@ -80,7 +83,7 @@ const tableData = [
     transactionDirections: 'ＡＴＭ轉',
     payoutAmount: '',
     deposits: '888',
-    accountBalance: '2,672',
+    accountBalance: '2672',
     ticketNumber: '',
     note: '8004000028000721 004',
   },
@@ -92,7 +95,7 @@ const tableData = [
     transactionDirections: 'ＡＴＭ轉',
     payoutAmount: '',
     deposits: '888',
-    accountBalance: '3,560',
+    accountBalance: '3560',
     ticketNumber: '',
     note: '8004000028000721 004',
   },
@@ -104,7 +107,7 @@ const tableData = [
     transactionDirections: 'ＡＴＭ轉',
     payoutAmount: '',
     deposits: '888',
-    accountBalance: '4,448',
+    accountBalance: '4448',
     ticketNumber: '',
     note: '8004000028000721 004',
   },
@@ -120,7 +123,13 @@ const tableData = [
     ticketNumber: '',
     note: '0020992000988559 icash Pay',
   },
-];
+]);
+
+tableData.forEach((item) => {
+  item.accountBalanceFormat = computed(() => {
+    return fnThousandsSeparator(parseInt(item.accountBalance));
+  });
+});
 
 //row為某一行的除操作外的全部數據
 //column為某一列的屬性

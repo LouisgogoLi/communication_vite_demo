@@ -260,16 +260,18 @@ const fnSubmit = async () => {
       query: { showUI: false },
     });
     let addressListUrl = window.open(addressUrl.href);
-    addressListUrl.addEventListener('load', () => {
-      addressListUrl.postMessage(
-        {
-          acrossPages: true,
-          showHeaderFooter: false,
-          addressList: JSON.parse(JSON.stringify(twAddress.addressList)),
-        },
-        '*'
-      );
-    });
+    addressListUrl.onload = () => {
+      setTimeout(() => {
+        addressListUrl.postMessage(
+          {
+            acrossPages: true,
+            showHeaderFooter: false,
+            addressList: JSON.parse(JSON.stringify(twAddress.addressList)),
+          },
+          '*'
+        );
+      }, 10);
+    };
   }
 };
 

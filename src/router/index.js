@@ -106,6 +106,11 @@ export const routes = [
     ],
   },
   {
+    path: '/pinia_demo/pinia_test_reactive',
+    name: 'pinia_test_reactive',
+    component: () => import('@/views/pinia_demo/pinia_test_reactive/PiniaTestReactive.vue'),
+  },
+  {
     path: '/router_demo/navigation_guards',
     name: 'navigation_guards',
     component: () => import('@/views/router_demo/navigation_guards/NavigationGuards.vue'),

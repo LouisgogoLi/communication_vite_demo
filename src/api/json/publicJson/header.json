@@ -196,6 +196,14 @@
         "click": true,
         "auth": true,
         "List": []
+      },
+      {
+        "tab_id": "8_3",
+        "router_name": "pinia_test_reactive",
+        "name": "pinia_test_reactive",
+        "click": true,
+        "auth": true,
+        "List": []
       }
     ]
   },

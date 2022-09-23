@@ -11,7 +11,6 @@ import legacy from '@vitejs/plugin-legacy';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // eslint-disable-next-line no-undef
   const env = loadEnv(mode, process.cwd(), '');
 
   return {

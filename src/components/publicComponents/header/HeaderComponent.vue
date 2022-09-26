@@ -9,9 +9,9 @@
       @select="handleSelect"
     >
       <template v-for="item in header" :key="item.tab_id">
-        <el-menu-item :index="item.router_name" v-if="item.List.length === 0" :disabled="!item.click">{{
-          item.name
-        }}</el-menu-item>
+        <el-menu-item :index="item.router_name" v-if="item.List.length === 0" :disabled="!item.click">
+          {{ item.name }}
+        </el-menu-item>
         <el-sub-menu :index="item.router_name" v-else>
           <template #title>{{ item.name }}</template>
           <template v-for="secondItem in item.List" :key="secondItem.tab_id">
@@ -19,14 +19,14 @@
               :index="secondItem.router_name"
               v-if="secondItem.List.length === 0"
               :disabled="!secondItem.click"
-              >{{ secondItem.name }}</el-menu-item
-            >
+              >{{ secondItem.name }}
+            </el-menu-item>
             <el-sub-menu :index="secondItem.router_name" v-else>
               <template #title>{{ secondItem.name }}</template>
               <template v-for="thirdItem in secondItem.List" :key="thirdItem.tab_id">
-                <el-menu-item :index="thirdItem.router_name" :disabled="!thirdItem.click">{{
-                  thirdItem.name
-                }}</el-menu-item>
+                <el-menu-item :index="thirdItem.router_name" :disabled="!thirdItem.click">
+                  {{ thirdItem.name }}
+                </el-menu-item>
               </template>
             </el-sub-menu>
           </template>

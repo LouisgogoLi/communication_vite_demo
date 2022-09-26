@@ -204,6 +204,14 @@
         "click": true,
         "auth": true,
         "List": []
+      },
+      {
+        "tab_id": "8_4",
+        "router_name": "pinia_website_sample",
+        "name": "pinia_website_sample",
+        "click": true,
+        "auth": true,
+        "List": []
       }
     ]
   },

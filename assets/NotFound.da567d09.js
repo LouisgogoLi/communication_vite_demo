@@ -1,1 +1,0 @@
-import{_ as c,o,c as a,x as s,y as t,a as _}from"./index.0ba88d6c.js";const d={},n=e=>(s("data-v-cae0cf6a"),e=e(),t(),e),p={class:"NOTFOUNDPage"},r=n(()=>_("h1",null,"NOTFOUND",-1)),f=[r];function i(e,l){return o(),a("div",p,f)}const h=c(d,[["render",i],["__scopeId","data-v-cae0cf6a"]]);export{h as default};

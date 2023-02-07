@@ -19,7 +19,7 @@
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "echarts": "^5.3.3",
-    "element-plus": "^2.2.17",
+    "element-plus": "^2.1.4",
     "html2canvas": "^1.4.1",
     "jquery": "^3.6.1",
     "jspdf": "^2.5.1",
